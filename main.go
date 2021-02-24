@@ -8,7 +8,7 @@ import (
 )
 
 var inMemoryStore = make(map[string]string)
-var redirectURL = "http://0.0.0.0:8080"
+var redirectURL = "http://0.0.0.0:9000"
 
 func setupRouter() *gin.Engine {
 	r := gin.Default()
@@ -46,5 +46,5 @@ func setupRouter() *gin.Engine {
 
 func main() {
 	r := setupRouter()
-	r.Run(":8080")
+	r.Run(":9000")
 }
